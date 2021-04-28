@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Le super blog du dev | Article </title>
+</head>
+
+<body id="articleHtml">
+    <main id="detailArticle">
+        <section id="connect">
+            <a href="index.php">
+                <i class="las la-home"></i>
+            </a>
+        </section>
+        <article>
+            <!--article-->
+            <h2><?= $articleDt['title'] ?></h2>
+            <p>By : <?= $articleDt['pseudo'] ?> </p>
+            <p> Edit : <?= $articleDt['date'] ?></p>
+            <p><?= $articleDt['body'] ?></p>
+        </article>
+        <article >
+            <!--commentaire-->
+            <h3>Espace commentaires : </h3>
+            <section id="commentaires">
+                <?php foreach($comments as $comment): ?>
+                <p><span><?= $comment['pseudo'] ?></span> said : <?= $comment['body'] ?></p>
+                <hr>
+                <?php endforeach ?>
+            </section>
+            <h3>Ajouter un commentaire</h3>
+            <form action="article.php" method="POST">
+                <label for="pseudo">Pseudo : </label>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required><br><br>
+
+                <label for="comment">Commentaire : </label>
+                <textarea type="text" name="comment" placeholder="Comment'" required> </textarea> <br>
+                
+
+                <button type="submit" value="envoyer"/> Envoyer </button>
+            </form>
+        </article>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+/********************** MON PROJET BLOG *******************/
+
+En tant que cliente je souhaiterais un blog avec les fonctionnalités suivantes:
+
+- Sur la page d'accueil permettre à tous les utilisateurs:
+	- d'acceder à un extrait des 5 dernieres publications
+	- de pouvoir s'inscrire
+	- de se connecter
+
+Pour les utilisateurs connectés je souhaiterai qu'ils puissent :
+	- ajouter une publication ( on doit pouvoir categoriser une publication en permettant à l'utilisateur de choisir une catégorie dans un menu deroulant)
+	- ajouter un ou des commentaire(s) à une publication (un commentaire est lié à une publication)
+	- modifier une publication
+	- ou supprimer une publication
+
+
+
+
+Page accueil si connecté: 
+
+- Afficher les bouton:
+	- se deconnecter
+	- et un boutton publier un article
+
+- Pour chacune des publications permmettre à l'utilisateur :
+ 		- d'acceder au contenu complet et aux commentaires liés à  la publication (par exemple dans une page detail article)
+ 		- de modifier une publication (qui permet d'acceder à une page pour modifier l'article)
+
+ - Detail article :
+ 		- Afficher le contenu complet
+ 		- Un formulaire pour ajouter un commentaire à l'article
+ 			- possibilité de valider ou d'annuler le formulaire d'ajout du commentaire 
+ 		- Et un bouton permettant de supprimer la publication plus les commentaires liés
+
+ - Editer article pour modif:
+ 		- Formulaire permettant de modifirer l'article
+ 		- Bouton valider ou annuler la modif 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************/
+/************** TABLES BDD ***********/
+/*************************************/
+
+
+Créer une base de donnée avec les tables suivantes :
+
+- Une table publications
+ -> colonnes : id :id_publication
+ -> colonne : titre : titre
+ -> colonnes : contenu: contenu
+ -> colonne : date de publication: dateDePublication
+
+
+- Une table categories
+ -> colonnes : id:  id_catégorie
+ -> colonnes : nom catégorie : nom_categorie
+
+ Une table commentaire :
+  -> colonnes : id :id_commentaire
+ -> colonne : titre : titre
+ -> colonnes : contenu: contenu
+ -> colonne : date de publication: dateDePublication
+
+- Une table User 
+	-> colonne : id : id_user
+	-> colonne : nom : nom
+	-> colonne : prenom : prenom
+	-> colonne : pseudo : pseudo
+	-> colonne : mail : mail
+	-> colonne : mot de passe : mot_de_passe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************/
+/************** relations entre les TABLES BDD ***********/
+/**********************************************************/
+
+Lier les tables suivantes :
+ - la table publications avec la table catégories => une catégorie peut avoir plusieurs publications (pas l'inverse)
+ - la table user et publication => un user peut avoir plusieurs publications (pas l'inverse)
+ - la table commentaire avec la table publication =>une publiaction peut avoir plusieur commentaires (pas l'inverse)
+
+
+
+BON COURAGE 
+KEEP GOING ;)
+
+
+
+
+
+
+
+

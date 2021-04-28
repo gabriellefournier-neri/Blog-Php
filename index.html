@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Le super blog du dev | Accueil </title>
+</head>
+
+<body id="home">
+    <header>
+        <section id="connect">
+            <!-- <a href="signin.php" alt="S'inscrire">
+                <i class="las la-user-plus"></i>
+                <p>S'inscrire</p>
+            </a>
+            <a href="login.php" alt="Se Connecter">
+                <i class="las la-user-circle"></i>
+                <p>Mon espace</p>
+            </a> -->
+
+            <!-- SESSION START : LOG OUT || SESSION DESTOY : LOG IN / SIGN IN  -->
+            <?php if (empty($_SESSION)==true) { ?>
+            <!-- //ici le code html à exécuter si la condition est remplie -->
+            <a href="signIn.php">
+                <i class="las la-user-plus"></i>
+                <p>S'inscrire</p>
+            </a>
+            <a href="login.php">
+                <i class="las la-user-circle"></i>
+                <p>Mon espace</p>
+            </a>
+            <?php } else { ?>
+            <!-- //ici le code html à exécuter si la condition n'est pas remplie -->
+            <a href="logout.php" alt="Se deconnecter">
+                <i class="las la-sign-out-alt"></i>
+                <p>Déconnecter</p>
+            </a>
+            <?php } ?>
+            <!-- END ----------------------- SESSION START : LOG OUT || SESSION DESTOY : LOG IN / SIGN IN  -->
+
+        </section>
+        <h1>BIENVENUE</h1>
+        <!-- ici session off : jeune padawan 
+            session start : $pseudo -->
+
+        <!-- TEST1  -->
+        <!-- <?php
+        if(empty($_SESSION)==true) {
+            echo "<p>Jeune padawan inconnu </p>";
+        }else {
+            echo $_SESSION['pseudo'];
+        } 
+        ?> -->
+        <!-- FIN TEST 1 -->
+
+        <!-- TEST2 LE : PEUT REMPLACER L'ACCOLADE ???? OUI, dans ce cas, mettre endif à la place de l'accolade fermante -->
+        <?php if(empty($_SESSION)==true) { ?>
+        <p>Jeune padawan du PHP inconnu </p>
+        <?php }
+            else { ?>
+        <?= $_SESSION['pseudo'] ?>
+        <?php } ?>
+        <!-- FIN TEST2 -->
+
+        <h2>Projet Php | MySql</h2>
+        <?php if(empty($_SESSION)==true): ?>
+        <article id="call">
+            <button id="sign"> <a href="signIn.php">Inscription</a></button>
+            <button id="log"> <a href="login.php">Connexion</a></button>
+        </article>
+        <?php endif ?>
+        
+    </header>
+    <main>
+        <h2>NOS DERNIERS ARTICLES</h2>
+        <!-- A FAIRE :  Boucle php pour afficher 5 articles session off || SessionStart: afficher tous les articles  -->
+
+        <?php if(empty($_SESSION)==true) { ?>
+        <!-- Si session off  -->
+        <?php foreach($articles as $article ): ?>
+        <section id="articles">
+
+            <div id="article">
+                <a href="article.php?articleNumber=<?= $article['id'] ?>">
+                    <h3><?= $article['title'] ?></h3>
+                    <p><?= $article['extract'] ?></p>
+                </a>
+            </div>
+
+        </section>
+        <?php endforeach ?>
+        <?php }
+        else { ?>
+        <!-- Si session start -->
+        <?php foreach($articlesFULL as $articlefull ): ?>
+        <section id="articles">
+            <div id="article">
+                <a href="article.php?articleNumber=<?= $articlefull['id'] ?>">
+                    <h3><?= $articlefull['title'] ?></h3>
+                    <p><?= $articlefull['extract'] ?></p>
+                </a>
+            </div>
+        </section>
+        <?php endforeach ?>
+        <!-- Fin de la boucle  -->
+        <!-- Afficher le bouton si session start -->
+        <section id="index-add" class="mb-2">
+            <button><a href="ajoutarticle.php">Publier un nouvel article</a></button>
+        </section>
+
+
+        <!-- Fin session start  -->
+        <?php } ?>
+        <!-- FIN DU IF PHP -->
+
+    </main>
+    <footer>
+        <p class="tx-ce">Copyright &copy; Gabrielle Fournier-Néri | Session Php 19/04/2021 - ??/04/2021</p>
+    </footer>
+</body>
+
+</html>

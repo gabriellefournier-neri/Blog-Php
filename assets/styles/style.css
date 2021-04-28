@@ -1,0 +1,354 @@
+/* initialise  */
+body {
+    margin: 0;
+}
+
+/* 
+@font-face {
+    font-family: 'telegrafultralight';
+    src: url('telegraf-ultralight-webfont.woff2') format('woff2'),
+         url('telegraf-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet"> */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@100;300;400;500;600;700;900&display=swap');
+
+.d-flex {
+    display: flex;
+}
+.mb-2{
+    margin-bottom: 2%;
+}
+/* body {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+} */
+
+.tx-ce {
+    text-align: center;
+    justify-content: center;
+}
+
+#connect {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#connect a {
+    margin-top: 20px;
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(231, 223, 223);
+}
+
+#connect a:hover {
+    color: #e9cdca;
+}
+
+#connect i {
+    font-size: 25px;
+}
+
+#connect p {
+    margin-top: 5px;
+}
+
+header {
+    height: 70vh;
+    text-align: center;
+    /* background: rgb(48,85,120);
+    background: linear-gradient(241deg, rgba(48,85,120,1) 38%, rgba(192,211,217,1) 96%); */
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    color: white;
+}
+#message{
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    background-color: rgb(231, 223, 223);
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-top: 6%;
+    color: #dddddd;
+}
+
+#call {
+    display: flex;
+    justify-content: center;
+    margin-left: -2%;
+}
+
+#call button {
+    margin-top: 2%;
+    height: 40px;
+    width: 10%;
+    border-radius: 30px;
+    margin-left: 2%;
+}
+
+button {
+    margin-top: 2%;
+    padding: 5px;
+    border-radius: 30px;
+    margin-left: 2%;
+}
+
+#home button:hover {
+    background: rgb(102, 136, 111);
+    background: linear-gradient(180deg, rgba(102, 136, 111, 1) 14%, rgba(165, 191, 164, 1) 100%);
+    color: white;
+    border: none;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+main {
+    text-align: center;
+    min-height: 50vh;
+}
+
+main h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #313c41;
+}
+
+/* ARTICLES RANDOWN */ 
+
+#articles{
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+#articles div{
+    text-align: center;
+    align-items: center;
+    border: 2px solid rgba(102, 136, 111, 0.733);
+    background-color: rgba(102, 136, 111, 0.144);
+    border-radius: 15px;
+    width: 70%;
+    padding: 5px;
+    margin: 15px;
+}
+#articles a{
+    text-decoration: none;
+    font-style: none;
+    color: black;
+    text-align: center;
+}
+
+
+/* LOG IN -------------------------------------------------------------- */
+#login {
+    background-image: url(../img/bg.jpg);
+    background-position: 100% 1%;
+    height: 100vh;
+}
+
+#login h1, #login h2 {
+    color: white;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    border: 1px solid white;
+    padding: 5% 10%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.822);
+    color: rgb(5, 31, 17);
+    font-size: 20px;
+}
+
+input {
+    border-radius: 30px;
+    height: 20px;
+    padding: 0 10px;
+}
+
+
+#login button {
+    padding: 5px;
+    border-radius: 25px;
+    width: 100%;
+    background: rgb(102, 136, 111);
+    background: linear-gradient(180deg, rgba(102, 136, 111, 1) 14%, rgba(165, 191, 164, 1) 100%);
+    color: white;
+    border: none;
+    margin-left: 0;
+}
+
+
+#buttonsignIn {
+    display: flex;
+    justify-content: center;
+}
+#buttonsignIn h2{
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+}
+#buttonsignIn button{
+    margin-top: 0;
+}
+
+
+
+
+/* -------------------------------------------------------------------------  END LOG IN  */
+
+/* SIGN IN -----------------------------------------------------------------*/ 
+#signin {
+    background-image: url(../img/bg.jpg);
+    background-position: 100% 1%;
+    height: 100vh;
+}
+
+#signin h1, #signin h2 {
+    color: white;
+}
+
+#formSignIn {
+    display: flex;
+    justify-content: center;
+}
+
+
+form {
+    border: 1px solid white;
+    padding: 5% 10%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.822);
+    color: rgb(5, 31, 17);
+    font-size: 20px;
+}
+
+input {
+    border-radius: 30px;
+    height: 20px;
+    padding: 0 10px;
+}
+
+
+#formSignIn button {
+    padding: 5px;
+    border-radius: 25px;
+    width: 100%;
+    background: rgb(102, 136, 111);
+    background: linear-gradient(180deg, rgba(102, 136, 111, 1) 14%, rgba(165, 191, 164, 1) 100%);
+    color: white;
+    border: none;
+    margin-left: 0;
+}
+
+#buttonLogIn {
+    display: flex;
+    justify-content: center;
+}
+#buttonLogIn h2{
+    font-weight: 300;
+    margin-top: 15px;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+#buttonLogIn button{
+    margin-top: 0;
+    width: 150px;
+}
+
+
+
+
+/* --------------------------------------------------------------------------- END SIGN IN */ 
+
+
+
+/* ARTICLE DETAIL article.html----------------------------------------- */
+#articleHtml h2{
+    text-transform: uppercase;
+    color: black;
+}
+
+#articleHtml {
+    background-image: url(../img/bg.jpg);
+    background-position: 100% 1%;
+}
+
+#detailArticle article{
+    padding: 10px 5%;
+    margin: 70px;
+    background-color: rgba(255, 248, 220, 0.582);
+}
+#detailArticle h3{
+    color: #304932;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+#detailArticle article p span{
+    font-weight: bold;
+    font-style: italic;
+}
+#commentaires{
+    text-align: left;
+}
+
+
+/* ----------------------------------------- END ARTICLE DETAIL  */
+/*AJOUTER ARTICLE ---------------------------------------------------*/
+
+#ajoutArticle{
+    display: flex;
+    justify-content: center;
+}
+/* #ajoutArticle{
+    padding: ;
+} */
+
+#ajoutArticle label{
+    font-size: 16px;
+
+}
+
+
+/*--------------------------------------------------- END AJOUTER ARTICLE */
+
+
+
+
+
+
+
+
+
+footer {
+    background-image: url(../img/bg.jpg);
+    color: white;
+    padding: 1px;
+}
